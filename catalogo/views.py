@@ -3,7 +3,7 @@ from django.views import generic
 
 # Create your views here.
 
-from catalogo.models import Genero, Linguagem, Livro, ExemplarLivro, Autor
+from catalogo.models import Genero, Linguagem, Autor, Livro, ExemplarLivro
 
 def index(request):
 
@@ -33,8 +33,10 @@ def index(request):
 
 
 class BookListView(generic.ListView):
+
     model = Livro
 
 
-class BookDetailView(generic.DeleteView):
+class BookDetailView(generic.DetailView):
+
     model = Livro
