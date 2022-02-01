@@ -27,8 +27,8 @@
                 <!-- Menu de navegação padrão para todas as páginas -->
                 {% block sidebar %}
                     <ul class="sidebar-nav">
-                        <li><a href="{% url 'index %'}">Home</a></li>
-                        <li><a href="">All Books</a></li>
+                        <li><a href="{% url 'index %'}">Página inicial</a></li>
+                        <li><a href="{% url 'livros' %}">Todos os livros</a></li>
                         <li><a href="">All authors</a></li>
                     </ul>
                 {% endblock %}

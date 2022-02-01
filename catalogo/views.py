@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views import generic
 
 # Create your views here.
 
@@ -29,3 +30,11 @@ def index(request):
 
     # Renderizando o template index.html com os dados da variável contexto:
     return render(request, 'index.html', context=contexto)
+
+
+class BookListView(generic.ListView):
+    model = Livro
+
+
+class BookDetailView(generic.DeleteView):
+    model = Livro

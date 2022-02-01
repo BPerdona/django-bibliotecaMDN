@@ -1,6 +1,7 @@
 from pyexpat import model
 from xmlrpc.client import TRANSPORT_ERROR
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -39,6 +40,10 @@ class Livro(models.Model):
     isbn = models.CharField('ISBN', max_length=13)
     genero = models.ManyToManyField(Genero, help_text='Selecione um mais gênero para esse livro.')
     linguagem = models.ForeignKey(Linguagem, on_delete=models.SET_NULL, null=True)
+
+
+    def get_absolute_url(self):
+        return reverse('livro-detalhes', args=[str(self.id)])
 
     def __str__(self):
         return self.titulo
