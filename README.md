@@ -11,7 +11,7 @@ O objetivo é desenvolver um sistema web para o gerenciamento de uma biblioteca.
 Utilize os códigos abaixo na linha de comando adaptando para seu sistema:
 
 ```
-git clone https://github.com/Acacio-coding/tutotrialMDNDjango.git
+git clone https://github.com/BPerdona/django-bibliotecaMDN.git
 ```
 
 ```
